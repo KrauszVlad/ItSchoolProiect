@@ -46,5 +46,28 @@ app.MapControllers();
 
 app.MapFallbackToFile("/index.html");
 
+{
+    using (var scope = app.Services.CreateScope())
+    {
+        var serviceProvider = scope.ServiceProvider;
+        var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+        SeedRoles(roleManager).GetAwaiter().GetResult();
+
+        async Task SeedRoles(RoleManager<IdentityRole> roleManager)
+        {
+            string[] roleNames = { "Admin", "User"};
+
+            foreach (var roleName in roleNames)
+            {
+                var roleExists = await roleManager.RoleExistsAsync(roleName);
+                if (!roleExists)
+                {
+                    await roleManager.CreateAsync(new IdentityRole(roleName));
+                }
+            }
+        }
+    }
+}
+
 app.Run();
 

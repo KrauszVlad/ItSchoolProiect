@@ -1,13 +1,141 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abur 2024</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1b1b1b;
+            color: #ddd;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #2a2a2a;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+            nav a:hover {
+                color: #ff6600;
+            }
+
+        main {
+            padding: 2rem;
+        }
+
+        .game-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .game-card {
+            background-color: #2a2a2a;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+            .game-card:hover {
+                transform: scale(1.05);
+            }
+
+            .game-card img {
+                max-width: 100%;
+                border-radius: 8px;
+            }
+
+            .game-card h3 {
+                margin: 1rem 0 0.5rem;
+                color: #fff;
+            }
+
+            .game-card p {
+                margin: 0.5rem 0;
+                color: #bbb;
+            }
+
+            .game-card button {
+                padding: 0.5rem 1rem;
+                background-color: #ff6600;
+                border: none;
+                border-radius: 4px;
+                color: #fff;
+                cursor: pointer;
+                font-weight: bold;
+            }
+
+                .game-card button:hover {
+                    background-color: #e65c00;
+                }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #2a2a2a;
+            color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">GameStore</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Store</a></li>
+                <li><a href="#">Library</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="game-list">
+            <div class="game-card">
+                <img src="src/assets/Images/game1.jpg" alt="Game 1">
+                <h3>Tony Turda Hero of BMW</h3>
+                <p>A video game focused on the landscape of the beautiful city of Turda where out main protagonist tries to steal gasoline for the sole purpose of burning the famous Turda Tree</p>
+                <button>Buy Now</button>
+            </div>
+            <div class="game-card">
+                <img src="src/assets/Images/game2.jpg" alt="Game 2">
+                <h3>Whole Kiwi Eating Walrus</h3>
+                <p>Designed to scare or unsettle the player through gameplay of eating raw kiwi without peeling the skin of it .</p>
+                <button>Buy Now</button>
+            </div>
+            <!-- Add more game cards as needed -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Abur.All Rights Reserved</p>
+    </footer>
+</body>
 </html>

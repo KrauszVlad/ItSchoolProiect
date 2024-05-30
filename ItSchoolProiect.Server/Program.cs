@@ -71,3 +71,5 @@ app.MapFallbackToFile("/index.html");
 
 app.Run();
 
+
+////// Continue with setting up api jwt authentication codebehind.

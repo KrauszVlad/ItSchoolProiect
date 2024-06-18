@@ -4,143 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abur 2024</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #1b1b1b;
-            color: #ddd;
-        }
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            background-color: #2a2a2a;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #fff;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 1rem;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-            nav a:hover {
-                color: #ff6600;
-            }
-
-        main {
-            padding: 2rem;
-        }
-
-        .game-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .game-card {
-            background-color: #2a2a2a;
-            padding: 1rem;
-            border-radius: 8px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-            .game-card:hover {
-                transform: scale(1.05);
-            }
-
-            .game-card img {
-                max-width: 100%;
-                border-radius: 8px;
-            }
-
-            .game-card h3 {
-                margin: 1rem 0 0.5rem;
-                color: #fff;
-            }
-
-            .game-card p {
-                margin: 0.5rem 0;
-                color: #bbb;
-            }
-
-            .game-card button {
-                padding: 0.5rem 1rem;
-                background-color: #ff6600;
-                border: none;
-                border-radius: 4px;
-                color: #fff;
-                cursor: pointer;
-                font-weight: bold;
-            }
-
-                .game-card button:hover {
-                    background-color: #e65c00;
-                }
-
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: #2a2a2a;
-            color: #bbb;
-        }
-    </style>
 </head>
-<body>
-    <header>
-        <div class="logo">GameStore</div>
-        <nav>
-            <ul>
-                <li><a href="library.html">Library</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Store</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Login</a></li>
+<body style="background: var(--bs-body-color);color: #eeeeee;">
+    <nav class="navbar navbar-expand-md bg-body py-3" style="background: transparent !important;color: rgb(255,255,255);">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <span class="bs-icon-md bs-icon-rounded d-flex justify-content-center align-items-center me-2 bs-icon" style="color: #ffd369;">
+                    <svg class="bi bi-rocket-takeoff-fill" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M12.17 9.53c2.307-2.592 3.278-4.684 3.641-6.218.21-.887.214-1.58.16-2.065a3.578 3.578 0 0 0-.108-.563 2.22 2.22 0 0 0-.078-.23V.453c-.073-.164-.168-.234-.352-.295a2.35 2.35 0 0 0-.16-.045 3.797 3.797 0 0 0-.57-.093c-.49-.044-1.19-.03-2.08.188-1.536.374-3.618 1.343-6.161 3.604l-2.4.238h-.006a2.552 2.552 0 0 0-1.524.734L.15 7.17a.512.512 0 0 0 .433.868l1.896-.271c.28-.04.592.013.955.132.232.076.437.16.655.248l.203.083c.196.816.66 1.58 1.275 2.195.613.614 1.376 1.08 2.191 1.277l.082.202c.089.218.173.424.249.657.118.363.172.676.132.956l-.271 1.9a.512.512 0 0 0 .867.433l2.382-2.386c.41-.41.668-.949.732-1.526l.24-2.408Zm.11-3.699c-.797.8-1.93.961-2.528.362-.598-.6-.436-1.733.361-2.532.798-.799 1.93-.96 2.528-.361.599.599.437 1.732-.36 2.531Z"></path>
+                        <path d="M5.205 10.787a7.632 7.632 0 0 0 1.804 1.352c-1.118 1.007-4.929 2.028-5.054 1.903-.126-.127.737-4.189 1.839-5.18.346.69.837 1.35 1.411 1.925Z"></path>
+                    </svg>
+                </span><span style="color: rgb(255,255,255);">Cheez</span>
+            </a><button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-2" style="color: rgb(255,255,255);background: #ffd369;font-size: 16px;"><span class="visually-hidden" style="color: rgb(255,255,255);font-family: 'Noto Sans';font-weight: bold !important;">Toggle navigation</span><span class="navbar-toggler-icon" style="font-weight: bold !important;color: rgb(255,255,255);font-family: 'Noto Sans';"></span></button>
+            <div id="navcol-2" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item" style="min-width: 70px;"><a class="nav-link active" href="index.html" style="color: rgb(255,255,255);">Store</a></li>
+                    <li class="nav-item" style="min-width: 70px;"><a class="nav-link" href="home.html" style="color: rgba(255,255,255,0.65);">Home</a></li>
+                    <li class="nav-item" style="min-width: 70px;"><a class="nav-link" href="library.html" style="color: rgba(255,255,255,0.65);">Library</a></li>
+                </ul><a class="btn btn-primary ms-md-2" role="button" href="#" style="font-weight: bold !important;min-width: 120px;background: #ffd369;color: #222831;font-family: 'Noto Sans';border: 0px !important;">Login</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row" style="color: #ffffff;">
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4" style="margin-top: 10px;margin-bottom: 10px;">
+                <div class="card" style="width: 100% !important;border-top-left-radius: 0px !important;border-top-right-radius: 0px !important;background: rgba(255,255,255,0.05);color: rgb(255,255,255);border: 0px;box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);">
+                    <img class="card-img-top w-100 d-block" src=/src/assets/Images/game1.jpg />
+                    <div class="card-body d-grid" style="background: #222831;">
+                        <h4 class="text-center card-title" style="font-family: 'Noto Sans', sans-serif;color: #ffd369;"><strong>Diablo 4</strong></h4>
+                        <p class="text-center card-text" style="font-family: 'Noto Sans', sans-serif;text-align: center;font-size: 15px;font-weight: 600;">Diablo 4 puts players back into the bleak world of Sanctuary, where forces from heaven and hell manipulate humans to do their bidding. The Mother of Sanctuary, Lilith,</p><a class="btn btn-info d-xl-flex justify-content-xl-center align-items-xl-center" role="button" target="_blank" style="font-weight: 600;font-family: 'Noto Sans';color: #393e46;background: #ffd369;">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4" style="margin-top: 10px;margin-bottom: 10px;">
+                <div class="card" style="width: 100% !important;border-top-left-radius: 0px !important;border-top-right-radius: 0px !important;background: rgba(255,255,255,0.05);color: rgb(255,255,255);border: 0px;box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);">
+                    <img class="card-img-top w-100 d-block" src=/src/assets/Images/game2.jpg />
+                    <div class="card-body d-grid" style="background: #222831;">
+                        <h4 class="text-center card-title" style="font-family: 'Noto Sans', sans-serif;color: #ffd369;"><strong>Outlast Trials</strong></h4>
+                        <p class="text-center card-text" style="font-family: 'Noto Sans', sans-serif;text-align: center;font-size: 15px;font-weight: 600;">The Outlast Trials is a horror game you can play by yourself or online. Set in the era of the Cold War, human guinea pigs are involuntarily recruited by the Murkoff Corporation to test methods of brainwashing and mind control. Survive alongside friends or dare to face the experiments by yourself</p><a class="btn btn-info d-xl-flex justify-content-xl-center align-items-xl-center" role="button" target="_blank" style="font-weight: 600;font-family: 'Noto Sans';color: #393e46;background: #ffd369;">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4" style="margin-top: 10px;margin-bottom: 10px;">
+                <div class="card" style="width: 100% !important;border-top-left-radius: 0px !important;border-top-right-radius: 0px !important;background: rgba(255,255,255,0.05);color: rgb(255,255,255);border: 0px;box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);">
+                    <img class="card-img-top w-100 d-block" src="/src/assets/Images/game3.jpg"/>
+                    <div class="card-body d-grid" style="background: #222831;">
+                        <h4 class="text-center card-title" style="font-family: 'Noto Sans', sans-serif;color: #ffd369;"><strong>EA Fc 24 </strong></h4>
+                        <p class="text-center card-text" style="font-family: 'Noto Sans', sans-serif;text-align: center;font-size: 15px;font-weight: 600;">Description EA SPORTS FC™ 24 welcomes you to The World's Game, the most true-to-football experience ever, with HyperMotionV, PlayStyles optimized by Opta</p><a class="btn btn-info d-xl-flex justify-content-xl-center align-items-xl-center" role="button" target="_blank" style="font-weight: 600;font-family: 'Noto Sans';color: #393e46;background: #ffd369;">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4" style="margin-top: 10px;margin-bottom: 10px;">
+                <div class="card" style="width: 100% !important;border-top-left-radius: 0px !important;border-top-right-radius: 0px !important;background: rgba(255,255,255,0.05);color: rgb(255,255,255);border: 0px;box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);">
+                    <img class="card-img-top w-100 d-block" src="src/assets/Images/game4.jpg" />
+                    <div class="card-body d-grid" style="background: #222831;">
+                        <h4 class="text-center card-title" style="font-family: 'Noto Sans', sans-serif;color: #ffd369;"><strong>Assassin's Creed Valhalla'</strong></h4>
+                        <p class="text-center card-text" style="font-family: 'Noto Sans', sans-serif;text-align: center;font-size: 15px;font-weight: 600;">Assassin's Creed: Valhalla is the twelfth main installment in the Assassin's Creed series developed by Ubisoft.[1] In the game, the player takes control of Eivor Varinsdottir,[2] a Viking from Norway who participated in the Norse invasion of England during the 9th century.[3]</p><a class="btn btn-info d-xl-flex justify-content-xl-center align-items-xl-center" role="button" target="_blank" style="font-weight: 600;font-family: 'Noto Sans';color: #393e46;background: #ffd369;">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center" style="color: rgb(255,255,255);">
+        <div class="container text-muted py-4 py-lg-5">
+            <ul class="list-inline">
+                <li class="list-inline-item me-4"><a class="link-secondary" href="index.html">Store</a></li>
+                <li class="list-inline-item me-4"><a class="link-secondary" href="home.html">Home</a></li>
+                <li class="list-inline-item"><a class="link-secondary" href="library.html">Library</a></li>
             </ul>
-        </nav>
-    </header>
-    <main>
-        <div class="game-list">
-            <div class="game-card">
-                <img src="src/assets/Images/game1.jpg" alt="Game 1">
-                <h3>Call of Duty Modern Warfare III</h3>
-                <p>Modern Warfare III retains the realistic, modern setting of its predecessors and continues the sub-series storyline. The story follows multi-national special operations unit Task Force 141 tracking down Vladimir Makarov, a Russian ultranationalist and terrorist planning to trigger a third World War.</p>
-                <a href="https://www.callofduty.com/modernwarfare3"><button>Buy Now</button></a>
-            </div>
-            <div class="game-card">
-                <img src="src/assets/Images/game2.jpg" alt="Game 2">
-                <h3>Need for Speed Payback</h3>
-                <p>The series generally centers around illegal street racing and tasks players to complete various types of races while evading the local law enforcement in police pursuits.</p>
-                <a href="https://www.ea.com/games/need-for-speed/need-for-speed-payback?isLocalized=true"><button>Buy Now</button></a>
-            </div>
-            <div class="game-card">
-                <img src="src/assets/Images/game3.jpg" alt="Game 3">               
-                <h3>Outlast Trials</h3>
-                <p>The Outlast Trials is a horror game you can play by yourself or online. Set in the era of the Cold War, human guinea pigs are involuntarily recruited by the Murkoff Corporation to test methods of brainwashing and mind control. Survive alongside friends or dare to face the experiments by yourself.</p>          
-                <a href="https://redbarrelsgames.com/games/the-outlast-trials/"><button>Buy Now</button></a>            
-            </div>
-   
-</main>
-    <footer>
-        <p>&copy; 2024 Abur.All Rights Reserved</p>
+            <p class="mb-0" style="color: rgba(255,255,255,0.75);">Copyright © 2024 Cheez</p>
+        </div>
     </footer>
 </body>
 </html>
